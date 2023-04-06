@@ -1,0 +1,26 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: user4-poi-map-app-dev
+  annotations:
+    argocd/app-name: user4-poi-map-app-dev
+    backstage.io/kubernetes-id: user4-poi-map-app-dev
+    backstage.io/kubernetes-namespace: user4
+    backstage.io/kubernetes-label-selector: 'app.kubernetes.io/instance=user4-poi-map-app-dev'
+    backstage.io/techdocs-ref: dir:.
+    github.com/project-slug: backstage-mh5sz/user4-frontend
+  tags:
+    - typescript
+    - angular
+    - workshop
+  links:
+    - url: https://devspaces.apps.cluster-2w7cf.2w7cf.sandbox1883.opentlc.com/#https://github.com/backstage-mh5sz/user4-frontend?che-editor=che-incubator/che-code/insiders&devfilePath=.devfile-vscode.yaml
+      title: CodeReady Workspaces (VS Code)
+      icon: web
+    - url: https://devspaces.apps.cluster-2w7cf.2w7cf.sandbox1883.opentlc.com/#https://github.com/backstage-mh5sz/user4-frontend?che-editor=che-incubator/che-idea/next&devfilePath=.devfile-intellij.yaml
+      title: CodeReady Workspaces (JetBrains IntelliJ)
+      icon: web
+spec:
+  type: service
+  lifecycle: production
+  owner: "rhdeveloper-workshop-authors"
